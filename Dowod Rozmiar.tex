@@ -1,0 +1,57 @@
+Niech $R(X)$ oznacza funkcję zwracającą rozmiar zbioru $X$.
+\n
+
+\noindent
+Zauważmy, że wszystkich możliwych napisów długości k nad alfabetem binarnym jest $2^k$.
+\n
+
+\noindent
+Pokażemy, że $R(\mathbb{T}_k) + R(\mathbb{NT}_k) = 2^k$.
+\n
+
+\noindent
+Niech $\mathbb{X} \subseteq \mathbb{N}$ taki, że:
+\begin{itemize}
+	\item $1 \in \mathbb{X}$, oraz
+	\item $2 \in \mathbb{X}$, oraz
+	\item dla dowolnego $n \in \mathbb{N}$, jeśli $n \in \mathbb{X}$ oraz $(n + 1) \in \mathbb{X}$, to $(n + 2) \in \mathbb{X}$
+\end{itemize}
+Wtedy $\mathbb{X} = \mathbb{N}$
+\n
+
+\noindent
+Niech $\mathbb{X} = \{n \in \mathbb{N} | R(\mathbb{T}_n) + R(\mathbb{NT}_n) = 2^n\}$
+\n
+
+\noindent
+W dowodzie skorzystamy z powyższej zasady indukcji.
+\n
+
+\noindent
+Dowód indukcyjny:
+\n
+
+\noindent
+Podstawa indukcji:
+\begin{itemize}
+\item $1 \in \mathbb{X}$, bo $R(\mathbb{T}_1) + R(\mathbb{NT}_1) = 0 + 2 = 2 = 2^1$
+\item $2 \in \mathbb{X}$, bo $R(\mathbb{T}_2) + R(\mathbb{NT}_2) = 2 + 2 = 4 = 2^2$
+\end{itemize}
+
+\noindent
+Krok indukcyjny:
+\n
+\noindent
+Weźmy dowolne $n \in \mathbb{N}$. Załóżmy, że $n \in \mathbb{X}$ i $(n + 1) \in \mathbb{X}$. Pokażemy, że $(n + 2) \in \mathbb{X}$.
+\n
+
+\noindent
+$R(\mathbb{T}_{n + 2}) + R(\mathbb{NT}_{n + 2}) = (2 * R(\mathbb{T}_{n}) + R(\mathbb{T}_{n + 1})) + (2 * R(\mathbb{NT}_{n}) + R(\mathbb{NT}_{n + 1})) = 2 * (R(\mathbb{T}_n) + R(\mathbb{NT}_n)) + (R(\mathbb{T}_{n + 1}) + R(\mathbb{NT}_{n + 1}))  \stackrel{\text{zał. ind.}}{=} 2 * 2^n + 2^{n + 1} = 2^{n + 1} + 2^{n + 1} = 2 * 2^{n + 1} = 2^{n + 2}$
+\n
+
+\noindent
+Zatem $(n + 2) \in \mathbb{X}$.
+\n
+
+\noindent
+To znaczy, że na mocy tw. o indukcji $\mathbb{X} = \mathbb{N}$, czyli $R(\mathbb{T}_n) + R(\mathbb{NT}_n) = 2^n$

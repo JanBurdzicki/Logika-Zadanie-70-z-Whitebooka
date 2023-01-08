@@ -1,0 +1,54 @@
+Niech $\mathbb{X} \subseteq \mathbb{N}$ taki, że:
+\begin{itemize}
+	\item $1 \in \mathbb{X}$, oraz
+	\item $2 \in \mathbb{X}$, oraz
+	\item $3 \in \mathbb{X}$, oraz
+	\item dla dowolnego $n \in \mathbb{N}$, $n \geq 2$, jeśli $n \in \mathbb{X}$ oraz $(n + 1) \in \mathbb{X}$, to $(n + 2) \in \mathbb{X}$
+\end{itemize}
+Wtedy $\mathbb{X} = \mathbb{N}$
+\n
+
+\noindent
+Niech $\mathbb{X} = \{n \in \mathbb{N} | \mathbb{T}_n$ zawiera unikalne wartości$\}$
+\n
+
+\noindent
+W dowodzie skorzystamy z powyższej zasady indukcji.
+\n
+
+\noindent
+Dowód indukcyjny:
+\n
+
+\noindent
+Podstawa indukcji:
+\begin{itemize}
+\item $1 \in \mathbb{X}$, bo $\mathbb{T}_1 = \emptyset$
+\item $2 \in \mathbb{X}$, bo $\mathbb{T}_2 = \{00, 11\}$
+\item $3 \in \mathbb{X}$, bo $\mathbb{T}_3 = \{100, 011\}$
+\end{itemize}
+
+\noindent
+Krok indukcyjny:
+\n
+\noindent
+Weźmy dowolne $n \in \mathbb{N}, n \geq 2$. Załóżmy, że $n \in \mathbb{X}$ i $(n + 1) \in \mathbb{X}$. Pokażemy, że $(n + 2) \in \mathbb{X}$.
+\n
+
+\noindent
+Załóżmy nie wprost, że $\mathbb{T}_{n + 2}$ zawiera duplikaty. Zatem istnieją takie $i, j$, że $i \neq j$ i $\mathbb{T}_{n + 2, i} = \mathbb{T}_{n + 2, j}$. Rozważmy wszystkie przypadki, w jaki sposób mogliśmy stworzyć elementy $\mathbb{T}_{n + 2, i}$ i $\mathbb{T}_{n + 2, j}$:
+
+\begin{itemize}
+	\item Elementy $\mathbb{T}_{n + 2, i}$, $\mathbb{T}_{n + 2, j}$ powstały z elementów zbioru $\mathbb{T}_n$ poprzez dodanie $"00"$ lub $"11"$. Zauważmy, że skoro $\mathbb{T}_{n + 2, i} = \mathbb{T}_{n + 2, j}$, to w całości są takie same, więc w szczególności ostatnia operacja była taka sama i elementy, z których powstały elementy $\mathbb{T}_{n + 2, i}$ i $\mathbb{T}_{n + 2, j}$ też były. Czyli istnieją $i\prime, j\prime$ takie, że $i\prime \neq j\prime$ i $\mathbb{T}_{n, i\prime} = \mathbb{T}_{n, j\prime}$. Sprzeczność \lightning (bo z założenia indukcyjnego $\mathbb{T}_n \in X$, czyli zbiór $\mathbb{T}_n$ nie zawiera duplikatów).
+
+	\item Elementy $\mathbb{T}_{n + 2, i}$, $\mathbb{T}_{n + 2, j}$ powstały z elementów zbioru $\mathbb{T}_{n + 1}$ poprzez dodanie "przeciwnej cyfry". Zauważmy, że skoro $\mathbb{T}_{n + 2, i} = \mathbb{T}_{n + 2, j}$, to w całości są takie same, więc w szczególności ostatnia operacja była taka sama i elementy, z których powstały elementy $\mathbb{T}_{n + 2, i}$ i $\mathbb{T}_{n + 2, j}$ też były. Czyli istnieją $i\prime, j\prime$ takie, że $i\prime \neq j\prime$ i $\mathbb{T}_{n + 1, i\prime} = \mathbb{T}_{n + 1, j\prime}$. Sprzeczność \lightning (bo z założenia indukcyjnego $\mathbb{T}_{n + 1} \in X$, czyli zbiór $\mathbb{T}_{n + 1}$ nie zawiera duplikatów).
+
+	\item BSO: Załóżmy, że $\mathbb{T}_{n + 2, i}$ został stworzony z elementu zbioru $\mathbb{T}_n$, a $\mathbb{T}_{n + 2, j}$ został stworzony z elementu zbioru $\mathbb{T}_{n + 1}$. Zauważmy, że skoro $\mathbb{T}_{n + 2, i} = \mathbb{T}_{n + 2, j}$, to w całości są takie same, więc w szczególności pierwsze 2 znaki są takie same. Sprzeczność \lightning (bo pierwsze 2 znaki $\mathbb{T}_{n + 2, i} \in \{"00", "11"\}$, a  pierwsze 2 znaki $\mathbb{T}_{n + 2, j} \in \{"01", "10"\}$).
+\end{itemize}
+
+\noindent
+We wszystkich przypadkach otrzymaliśmy sprzeczność, zatem $(n + 2) \in \mathbb{X}$.
+\n
+
+\noindent
+To znaczy, że na mocy tw. o indukcji $\mathbb{X} = \mathbb{N}$, czyli $\mathbb{T}_n$ zawiera unikalne wartości.

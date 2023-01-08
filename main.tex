@@ -1,0 +1,86 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{authblk}
+\usepackage{amsfonts}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{wasysym}
+\usepackage{enumitem} %to jest do robienia podpunktów
+% \usepackage{marvosym}
+% \Lightning
+\def\Imp{\Rightarrow}
+\def\n{\newline}
+\def\sigmad{\hat{\sigma}}
+\newcommand\pp[2]{(p^#1 \Imp p^#2)}
+
+\title{\textbf{Zadanie 70. z Whitebooka}}
+\author{\textbf{Jan Burdzicki}}
+\affil{II UWr}
+% \date{27 November 2022}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\vspace{50pt}
+
+\renewcommand{\contentsname}{Spis treści}
+\tableofcontents
+
+\newpage
+
+\section{Opis problemu}
+
+\input{Opis Problemu}
+
+\section{Opis notacji}
+
+\input{Opis Notacji}
+
+\section{Podstawowe obserwacje}
+
+\input{Podstawowe obserwacje}
+
+% \newpage
+
+\section{Definicja i konstrukcja zbiorów}
+
+\input{Definicja i konstrukcja zbiorow}
+% \newpage
+
+\section{Dowód, że rodzina zbiorów $\mathbb{T}_k$ zawiera tylko napisy binarne reprezentujące tautologie}
+
+\input{Dowod Ze Tautologie}
+
+\section{Dowód, że rodzina zbiorów $\mathbb{NT}_k$ zawiera tylko napisy binarne reprezentujące nietautologie}
+
+\input{Dowod Ze Nietautologie}
+
+% \section{Dowody unikalności elementów zbiorów}
+
+\section{Dowód braku występowania duplikatów w rodzinie zbiorów $\mathbb{T}_k$}
+
+\input{Dowod Unikalnosci Elementow Zbioru Rodziny Zbiorow Tautologii}
+
+\section{Dowód braku występowania duplikatów w rodzinie zbiorów $\mathbb{NT}_k$}
+
+\input{Dowod Unikalnosci Elementow Zbioru Rodziny Zbiorow Nietautologii}
+
+
+\section{Dowód $\mathbb{T}_k \cap \mathbb{NT}_k = \emptyset$}
+
+\input{Dowod Przeciecie}
+
+\section{Dowód $\mathbb{T}_k \cup \mathbb{NT}_k$ zawiera wszystkie możliwe napisy długości k nad alfabetem binarnym}
+
+\input{Dowod Rozmiar}
+
+\section{Podsumowanie}
+
+\input{Podsumowanie}
+
+\section{Końcowe obserwacje}
+
+\input{Koncowe Obserwacje}
+
+\end{document}

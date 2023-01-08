@@ -1,0 +1,28 @@
+W przekształceniach poniżej będziemy korzystać z następujących własności dla dowolnych formuł rachunku zdań $\phi$, $\psi$:
+
+\begin{itemize}
+	\item $(\phi \Imp \psi) \equiv (\neg \phi \lor \psi)$
+	\item $(\phi \lor \phi) \equiv \phi$
+	\item $(\phi \lor \neg \phi) \equiv \top$
+	\item $(\bot \lor \phi) \equiv \phi$
+\end{itemize}
+
+\noindent
+Przekształcenia równoważne formuł:
+\begin{enumerate}[label=(2.\arabic*),leftmargin=3\parindent]
+    \item $((p^0 \Imp p^0) \Imp \psi) \equiv ((\neg p \Imp \neg p)\Imp \psi) \equiv ((p \lor \neg p) \Imp \psi) \equiv (\top \Imp \psi)$
+    \item $((p^1 \Imp p^1) \Imp \psi) \equiv ((p \Imp p)\Imp \psi) \equiv ((\neg p \lor p) \Imp \psi) \equiv (\top \Imp \psi)$
+    \item $((p^0 \Imp p^1) \Imp \psi) \equiv ((\neg p \Imp p)\Imp \psi) \equiv ((p \lor p) \Imp \psi) \equiv (p \Imp \psi) \equiv (p^1 \Imp \psi)$
+    \item $((p^1 \Imp p^0) \Imp \psi) \equiv ((p \Imp \neg p)\Imp \psi) \equiv ((\neg p \lor \neg p) \Imp \psi) \equiv (\neg p \Imp \psi) \equiv (p^0 \Imp \psi)$
+    \item $(\top \Imp \psi) \equiv (\neg \top \lor \psi) \equiv (\bot \lor \psi) \equiv \psi$
+\end{enumerate}
+
+\noindent Zapiszmy nasze przekształcenia równoważne w skróconej formie dla większej czytelności:
+\begin{enumerate}[label=(2.\arabic*),leftmargin=3\parindent]
+    \setcounter{enumi}5
+    \item $((p^0 \Imp p^0) \Imp \psi) \equiv (\top \Imp \psi)$
+    \item $((p^1 \Imp p^1) \Imp \psi) \equiv (\top \Imp \psi)$
+    \item $((p^0 \Imp p^1) \Imp \psi) \equiv (p^1 \Imp \psi)$
+    \item $((p^1 \Imp p^0) \Imp \psi) \equiv (p^0 \Imp \psi)$
+    \item $(\top \Imp \psi) \equiv \psi$
+\end{enumerate}

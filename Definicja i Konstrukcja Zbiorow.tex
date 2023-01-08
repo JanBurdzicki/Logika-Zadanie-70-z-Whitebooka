@@ -1,0 +1,38 @@
+Niech zbiór $\mathbb{W} = \mathbb{N}$ będzie zbiorem wskaźników.
+\n
+
+\noindent
+Rodzinę zbiorów $\mathbb{T}_k$, gdzie $k \in \mathbb{W}$, zdefiniujemy jako najmniejszy zbiór napisów binarnych długości $k$, dla których formuła $(... (( p^{i_1} \Imp p^{i_2} ) \Imp p^{i_3}) \Imp ...) \Imp p^{i_k}$ jest tautologią. $\mathbb{T}_{k, i}$ będziemy utożsamiać z $i$-tym napisem ze zbioru $\mathbb{T}_k$, a $\mathbb{T}_{k, i, j}$ będziemy utożsamiać z j-tym znakiem i-tego napisu ze zbioru $\mathbb{T}_{k}$.
+\n
+
+\noindent
+Analogicznie rodzinę zbiorów $\mathbb{NT}_k$, gdzie $k \in \mathbb{W}$, zdefiniujemy jako najmniejszy zbiór napisów binarnych długości $k$, dla których formuła $(... (( p^{i_1} \Imp p^{i_2} ) \Imp p^{i_3}) \Imp ...) \Imp p^{i_k}$ nie jest tautologią. $\mathbb{NT}_{k, i}$ będziemy utożsamiać z $i$-tym napisem ze zbioru $\mathbb{NT}_k$, a $\mathbb{NT}_{k, i, j}$ będziemy utożsamiać z j-tym znakiem i-tego napisu ze zbioru $\mathbb{NT}_{k}$.
+\n
+
+\noindent
+Konstrukcja rodziny zbiorów $\mathbb{T}_k$:
+\begin{itemize}
+	\item $\mathbb{T}_1 = \emptyset$, oraz
+	\item $\mathbb{T}_2 = \{00, 11\}$, oraz
+	\item $\mathbb{T}_3 = \{100, 011\}$, oraz
+	\item dla dowolnego $n \in \mathbb{W}$, $n \geq 4$, $\mathbb{T}_n$ zawiera sumę elemetów:
+	\begin{itemize}
+		\item zbioru $\mathbb{T}_{n - 1}$ z dopisaną z przodu cyfrą przeciwną do $\mathbb{T}_{n - 1, 1}$
+		\item zbioru $\mathbb{T}_{n - 2}$ z dopisanym z przodu $"00"$
+		\item zbioru $\mathbb{T}_{n - 2}$ z dopisanym z przodu $"11"$
+	\end{itemize}
+\end{itemize}
+
+\noindent
+Konstrukcja rodziny zbiorów $\mathbb{NT}_k$:
+\begin{itemize}
+	\item $\mathbb{NT}_1 = \{0, 1\}$, oraz
+	\item $\mathbb{NT}_2 = \{01, 10\}$, oraz
+	\item $\mathbb{NT}_3 = \{101, 010, 000, 001, 110, 111\}$, oraz
+	\item dla dowolnego $n \in \mathbb{W}$, $n \geq 4$, $\mathbb{NT}_n$ zawiera sumę elemetów:
+	\begin{itemize}
+		\item zbioru $\mathbb{NT}_{n - 1}$ z dopisaną z przodu cyfrą przeciwną do $\mathbb{NT}_{n - 1, 1}$
+		\item zbioru $\mathbb{NT}_{n - 2}$ z dopisanym z przodu $"00"$
+		\item zbioru $\mathbb{NT}_{n - 2}$ z dopisanym z przodu $"11"$
+	\end{itemize}
+\end{itemize}
